@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/> 
+	<script>
+		function TrocaLetra(car){
+			switch(car){
+			case "t": return "p";
+			case "e": return "o";
+			case "n": return "l";
+			case "i": return "a";
+			case "s": return "r";
+			case "p": return "t";
+			case "o": return "e";
+			case "l": return "n";
+			case "a": return "i";
+			case "r": return "s";
+			default: return car;			
+		}
+		}
+		function criptografar () {
+			var frase = document.getElementById("frase").value;
+			var fraseCrip = ""
+			for(var i=0; i<frase.length; i++){
+				fraseCrip+= TrocaLetra(frase.charAt(i));
+			}
+			document.getElementById("msg").innerHTML=fraseCrip;
+		}
+	</script> 
+</head>
+<body>
+	<form>
+		<label> DIGITE UMA FRASE </label>
+		<input type="text" id="frase"/>
+		<input type="button" value="Frase" onclick="criptografar()" />
+		<h1 id="msg"></h1>
+		 
+		
+	</form>
+</body>
+</html>
